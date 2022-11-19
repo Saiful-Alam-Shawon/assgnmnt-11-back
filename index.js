@@ -164,9 +164,8 @@ async function run3() {
 run3().catch(err => console.log(err));
 
 
-const s3 = require('./data/service3.json');
-const s6 = require('./data/service6.json');
-
+app.get('/', (req, res) => res.send('Hello World!'))
+app.all('*', (req, res) => res.send('404'));
 
 // app.get('/service3', (req, res) => {
 //     res.send(s3)
